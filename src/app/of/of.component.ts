@@ -7,6 +7,7 @@ import { of } from 'rxjs';
   styleUrls: ['./of.component.scss']
 })
 export class OfComponent {
+  
   subscribe: any;
 
   // RxJS v6+
@@ -15,8 +16,7 @@ export class OfComponent {
   of(){ 
   const source = of(1, 2, 3, 4, 5);
 //output: 1,2,3,4,5
-  return  this.subscribe = source.subscribe(val => console.log(val));
-
+  this.subscribe = source.subscribe(val => console.log(val));
   
   // of operator is fixed set of values ADD
 

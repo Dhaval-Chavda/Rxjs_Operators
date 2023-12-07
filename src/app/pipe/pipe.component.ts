@@ -13,9 +13,9 @@ export class PipeComponent {
 
 
   pipe() {
-    const numbers$ = of(1, 2, 3, 4, 5);
+    const numbers = of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-    numbers$.pipe(
+    numbers.pipe(
       filter(num => num % 2 === 0),
       map(num => num * 2)
     ).subscribe(result => console.log(result));
